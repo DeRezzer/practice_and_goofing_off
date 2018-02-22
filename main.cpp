@@ -1,22 +1,39 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-void printArray(int theArray[], int sizeOfArray);
+void initiative_array(int theArray[], int sizeOfArray);
 
-int main(){
-    int first[3] = {20,54,675};
-    int second[6] = {54,24,7,8,9,99};
+int main()
+{
+    int number_creatures = 0;
+    cout << "How many Creatures are in this encounter: " << endl;
+    cin >> number_creatures;
 
-    printArray(second, 6);
-    printArray(first, 3);
-    return 0;
- }
+    for (int i = 0; i < number_creatures; i++){
+    char name_one[25];
+    int initiative = 0;
 
- void printArray(int theArray[], int sizeOfArray){
+    cout << "Please enter the creature or character name: " << endl;
+    cin >> name_one;
 
-    for (int x = 0; x < sizeOfArray; x++){
-        cout << theArray[x] << endl;
+    cout << "Enter creature or character initiative score: " << endl;
+    cin >> initiative;
+    cout << "" << endl;
+
+    cout << name_one << " " << initiative << endl;
     }
 
+    //int second [10] ={1,2,3,4,5,6,7,8,9,10};
+
+    //initiative_array(first, 10);
+    //initiative_array(second, 10);
+    return 0;
+}
+
+void initiative_array (int theArray[], int sizeOfArray){
+   for (int i = 0; i < sizeOfArray; i++){
+       cout << theArray[i];
+   }
 }
